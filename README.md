@@ -29,7 +29,7 @@ Windows 运行 EXE 安装程序。macOS 打开 DMG，将 Canvas Warp 拖入“�
 
 ### Photoshop 插件
 
-下载 CCX，双击并按 Creative Cloud 提示安装，然后重启 Photoshop，打开 Canvas Warp 面板。此包为本地开发包；如果 Creative Cloud 拒绝安装，请在 Issues 中报告具体提示。
+下载 CCX，双击并按 Creative Cloud 提示安装，然后重启 Photoshop，打开 Canvas Warp 面板。[Adobe CCX 安装说明](https://developer.adobe.com/uxp/guides/how-to/distribution/install/)。如果安装失败，可点击 Creative Cloud 的 Details 查看错误日志，并在 Issues 中报告具体提示。
 
 ### Illustrator 插件
 
@@ -38,7 +38,7 @@ Windows 运行 EXE 安装程序。macOS 打开 DMG，将 Canvas Warp 拖入“�
 - macOS：`~/Library/Application Support/Adobe/CEP/extensions/`
 - Windows：`%APPDATA%\Adobe\CEP\extensions\`
 
-开发扩展需要为所用 Illustrator 的对应 CSXS 版本开启调试模式。重启 Illustrator 后，在“窗口 → 扩展”中打开 CanvasWarp-AI。此开发包尚未提供签名的一键安装器。
+开发扩展需要为所用 Illustrator 的对应 CSXS 版本开启 `PlayerDebugMode`，步骤见 [Adobe CEP 开发扩展指南](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_12.x/Documentation/CEP%2012%20HTML%20Extension%20Cookbook.md#debugging-unsigned-extensions)。指南以 CSXS 12 为例，旧版宿主需替换成对应版本。重启 Illustrator 后，在“窗口 → 扩展”中打开 CanvasWarp-AI。此开发包尚未提供签名的一键安装器。
 
 ### Figma 插件
 

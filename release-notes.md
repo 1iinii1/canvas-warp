@@ -16,7 +16,7 @@
 
 先安装并启动中转程序，再加载对应 Adobe 插件，保持接收端面板打开。[完整安装说明](https://github.com/1iinii1/canvas-warp#安装)。
 
-macOS 中转程序未配置 Apple Developer ID 公证，Windows 未配置 Authenticode 签名。Photoshop 本地 CCX 安装是否成功取决于 Creative Cloud 的开发包支持；安装失败时请在公开仓库 Issues 中报告提示。Illustrator 当前需要手动加载 CEP 开发扩展。
+macOS 中转程序未配置 Apple Developer ID 公证，Windows 未配置 Authenticode 签名。Photoshop CCX 通过 Creative Cloud 安装；安装失败时请在公开仓库 Issues 中报告提示。Illustrator 当前需要手动加载 CEP 开发扩展。
 
 文字与矢量尽量保持可编辑；字体缺失或复杂外观无法等价映射时会近似处理或以图片保底。请先用文档副本核验转换结果。
 
