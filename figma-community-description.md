@@ -2,6 +2,8 @@
 
 ## 中文
 
+1.0.3 将 Figma → Photoshop 的单批上限提高到 2000 个图层。请同时更新 Figma 社区插件、本地中转程序和 Photoshop 插件；其他方向的原有限制及 256 MB 请求体上限保持不变。
+
 Canvas Warp 让你在 Figma、Photoshop 和 Illustrator 之间传递素材，尽量保留可编辑的文字、矢量、编组和蒙版。复杂效果或无法兼容的图层会使用图片保底，具体差异会在接收详情中显示。
 
 支持 Figma ↔ Photoshop、Figma ↔ Illustrator、Photoshop ↔ Illustrator 双向传输。Photoshop 与 Illustrator 之间可发送选中元素、当前画板或整个文档。也可将 Figma 或 Photoshop 的透明 PNG 发送到兼容的 FlowGPT Canvas。
@@ -34,6 +36,8 @@ Canvas Warp 让你在 Figma、Photoshop 和 Illustrator 之间传递素材，尽
 ---
 
 ## English
+
+Version 1.0.3 increases Figma → Photoshop transfers to 2,000 layers per batch. Update the Figma Community plugin, desktop companion, and Photoshop plugin together. Other directions retain their existing limits, and the request-size limit remains 256 MB.
 
 Transfer assets between Figma, Photoshop, and Illustrator while preserving editable text, vectors, groups, and masks where supported. Complex effects or unsupported layers use image fallbacks, with compatibility details shown after import.
 

@@ -1,3 +1,67 @@
+# Canvas Warp 1.0.3
+
+## 中文更新说明
+
+Figma → Photoshop 的单批图层上限从 200 提高到 2000，发送端、本地中转程序和 Photoshop 接收端同步支持。
+
+### 更新内容
+
+- 单批最多发送 2000 个实际导出图层，递归子图层和补出的背景图层计入数量。
+- 本次仅提高 Figma → Photoshop 的上限。其他传输方向保持原有限制：Illustrator 相关导出与 Photoshop → Illustrator 仍为 2000，Figma → Illustrator、Figma → FlowGPT 及其他原为 200 的方向仍为 200。
+- 单次请求体上限仍为 256 MB。图层数量符合要求时，大量图片或 PNG 保底仍可能先达到体积上限。
+
+### 更新方式
+
+请同时更新 **Figma 社区插件、Canvas Warp 本地中转程序、Photoshop 插件**。只更新其中一端，超过 200 层的任务仍可能被旧版拦截。保存文档后重启中转程序与 Photoshop，关闭并重新打开 Figma 插件，再发送内容。
+
+- [全部下载与最新版本](https://github.com/1iinii1/canvas-warp/releases/latest)
+- [Figma 社区插件](https://www.figma.com/community/plugin/1689327694454521056/canvas-warp)
+- [安装说明](https://github.com/1iinii1/canvas-warp#安装)
+
+### 验证与兼容性
+
+**812 项完整自动测试全部通过，0 失败、0 跳过；源码语法检查通过。** 测试覆盖图层数量边界和其他方向限制保持不变。尚未进行 2000 层文档在 Figma 与 Photoshop 宿主中的实际收发验证；实际导入耗时与资源占用取决于文档复杂度。
+
+文字、矢量和蒙版沿用既有兼容策略。macOS 中转程序尚未配置 Apple Developer ID 公证，Windows 尚未配置 Authenticode 签名；Illustrator 插件仍为需手动加载的 CEP 开发扩展。
+
+### 操作演示
+
+沿用 1.0.2 的完整操作演示（61.7 秒），社区页面按原顺序分为 3 段展示。
+
+[观看或下载完整演示视频](https://github.com/1iinii1/canvas-warp/releases/download/v1.0.2/Canvas-Warp-Demo.mp4)
+
+---
+
+## English release notes
+
+The per-transfer limit for Figma → Photoshop increases from 200 to 2,000 layers, with support in the Figma exporter, desktop companion, and Photoshop receiver.
+
+### Changes
+
+- Send up to 2,000 exported layers per transfer. Nested child layers and generated background layers count toward the limit.
+- This change applies only to Figma → Photoshop. Other directions retain their existing limits: Illustrator exports and Photoshop → Illustrator remain at 2,000; Figma → Illustrator, Figma → FlowGPT, and other directions previously limited to 200 remain at 200.
+- The request-size limit remains 256 MB. Image-heavy transfers and PNG fallbacks may reach the size limit before reaching the layer limit.
+
+### Updating
+
+Update all three components: **the Figma Community plugin, the Canvas Warp desktop companion, and the Photoshop plugin**. Updating only one component can leave older components rejecting transfers above 200 layers. Save your documents, restart the companion and Photoshop, reopen the Figma plugin, and resend your content.
+
+- [All downloads and latest release](https://github.com/1iinii1/canvas-warp/releases/latest)
+- [Figma Community plugin](https://www.figma.com/community/plugin/1689327694454521056/canvas-warp)
+- [Installation guide](https://github.com/1iinii1/canvas-warp#安装)
+
+### Validation and compatibility
+
+**All 812 automated tests passed, with 0 failures and 0 skipped; runtime syntax checks passed.** Coverage includes layer-count boundaries and unchanged limits for other directions. A 2,000-layer transfer has not yet been tested in the actual Figma and Photoshop hosts. Import time and resource usage depend on document complexity.
+
+Existing compatibility behavior for text, vectors, and masks is retained. The macOS companion is not Apple Developer ID notarized, and the Windows installer is not Authenticode signed. The Illustrator plugin remains a CEP development extension requiring manual loading.
+
+### Demo
+
+The complete 1.0.2 workflow demo is retained (61.7 seconds). The Community page shows it as three clips in their original order.
+
+[Watch or download the complete demo](https://github.com/1iinii1/canvas-warp/releases/download/v1.0.2/Canvas-Warp-Demo.mp4)
+
 # Canvas Warp 1.0.2
 
 ## 中文更新说明

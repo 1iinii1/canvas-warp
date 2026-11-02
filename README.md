@@ -6,7 +6,9 @@ Canvas Warp 在 Figma、Photoshop、Illustrator 和兼容的 FlowGPT Canvas 之�
 
 此仓库仅提供安装说明、问题反馈与成品下载，项目源码保存在私有仓库。安装包包含运行插件所需的文件。
 
-当前版本 **1.0.2**：支持 Figma ↔ Photoshop、Figma ↔ Illustrator 和 Photoshop ↔ Illustrator 双向传输，也可向兼容的 FlowGPT Canvas 发送透明 PNG。[查看更新内容](release-notes.md)。
+当前版本 **1.0.3**：支持 Figma ↔ Photoshop、Figma ↔ Illustrator 和 Photoshop ↔ Illustrator 双向传输，也可向兼容的 FlowGPT Canvas 发送透明 PNG。[查看更新内容](release-notes.md)。
+
+1.0.3 将 Figma → Photoshop 的单批上限提高到 2000 个图层。请同时更新 Figma 社区插件、本地中转程序和 Photoshop 插件；其他方向的原有限制及 256 MB 请求体上限保持不变。
 
 ## 演示
 
@@ -62,7 +64,7 @@ Windows 运行 EXE 安装程序。macOS 打开 DMG，将 Canvas Warp 拖入“�
 
 文字、矢量、编组和蒙版尽量保持可编辑。缺少字体、复杂外观或不同软件的 API 限制可能导致近似处理或图片保底；请先用文档副本核验结果。
 
-1.0.2 修复了 Figma → Photoshop 的画板背景、渐变缩放、混排字号和多行文字排版，改进 Photoshop 画板、编组蒙版与实际导入状态反馈。源码语法检查通过，完整自动测试 **807 项全部通过，0 失败、0 跳过**。已完成针对性宿主对照；不同 Adobe 版本、字体和复杂效果仍需按实际文档核验。
+1.0.3 将 Figma → Photoshop 的单批上限提高到 2000 个图层。请同时更新 Figma 社区插件、本地中转程序和 Photoshop 插件；其他方向的原有限制及 256 MB 请求体上限保持不变。完整自动测试 **812 项全部通过，0 失败、0 跳过**，源码语法检查通过；尚未进行 2000 层文档的宿主实际收发验证。
 
 [报告问题或提出建议](https://github.com/1iinii1/canvas-warp/issues)时，请提供操作系统、软件版本、传输方向和错误提示。
 
@@ -74,7 +76,9 @@ Canvas Warp transfers layers and images between Figma, Photoshop, Illustrator, a
 
 This repository provides installation instructions, issue tracking, and release downloads. Source code is kept in a private repository. Installers include the files needed to run the plugins.
 
-Current version: **1.0.2**. Transfer in both directions between Figma and Photoshop, Figma and Illustrator, and Photoshop and Illustrator. Transparent PNGs can also be sent to a compatible FlowGPT Canvas. [Read the release notes](release-notes.md).
+Current version: **1.0.3**. Transfer in both directions between Figma and Photoshop, Figma and Illustrator, and Photoshop and Illustrator. Transparent PNGs can also be sent to a compatible FlowGPT Canvas. [Read the release notes](release-notes.md).
+
+Version 1.0.3 increases Figma → Photoshop transfers to 2,000 layers per batch. Update the Figma Community plugin, desktop companion, and Photoshop plugin together. Other directions retain their existing limits, and the request-size limit remains 256 MB.
 
 ## Demo
 
@@ -130,6 +134,6 @@ Open the Canvas Warp panel in both apps and launch the updated companion. In the
 
 Text, vectors, groups, and masks remain editable where supported. Missing fonts, complex appearances, and app API limitations can lead to approximations or image fallbacks. Check the result using a document copy first.
 
-Version 1.0.2 fixes Figma → Photoshop backgrounds, gradient scaling, mixed font sizes, and multiline text layout, and improves Photoshop artboards, group masks, and confirmed import status. Syntax checks passed, and **all 807 automated tests passed, with 0 failures and 0 skipped**. Targeted host comparisons were completed; other Adobe versions, fonts, and complex effects should be checked with your actual documents.
+Version 1.0.3 increases Figma → Photoshop transfers to 2,000 layers per batch. Update the Figma Community plugin, desktop companion, and Photoshop plugin together. Other directions retain their existing limits, and the request-size limit remains 256 MB. **All 812 automated tests passed, with 0 failures and 0 skipped**, and runtime syntax checks passed. A 2,000-layer transfer has not yet been tested in the actual hosts.
 
 When [reporting an issue or suggesting an improvement](https://github.com/1iinii1/canvas-warp/issues), include your operating system, app versions, transfer direction, and any error message.
